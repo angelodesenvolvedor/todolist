@@ -1,0 +1,66 @@
+.header {
+    background-color: #314da6;
+    color: white;
+    padding: 2rem 0;
+
+    .container {
+        max-width: 1024px;
+        padding: 0 2rem;
+        margin: 0 auto;
+        width: 100%; // Garante que a largura seja sempre 100% dentro do max-width
+
+        div:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .statsContainer {
+        font-size: 0.875rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        transform: translateY(50%);
+        position: relative;
+
+        @media (max-width: 768px) {
+            justify-content: space-around;
+        }
+
+        @media (max-width: 480px) {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            transform: translateY(0);
+        }
+    }
+}
+
+.stats-card {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    @media (max-width: 480px) {
+        width: 45%;
+        display: inline-block;
+        margin: 0 2% 1rem 0;
+        vertical-align: top;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}
