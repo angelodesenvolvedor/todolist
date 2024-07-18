@@ -17,4 +17,17 @@
     span {
         font-size: 4rem;
     }
+
+    @media (max-width: 768px) {
+        width: 30%;
+        transform: translateY(40%);
+    }
+
+    @media (max-width: 480px) {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 1rem auto; /* Ajuste de margem para centralizar na linha */
+    }
 }
