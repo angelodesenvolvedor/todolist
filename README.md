@@ -12,7 +12,7 @@ Este projeto faz parte do curso **Front-end em React** na Ada Tech. O objetivo �
 Antes de começar, certifique-se de ter o seguinte instalado em seu sistema:
 
 - [Node.js](https://nodejs.org/en)
-- npm (geralmente vem instalado com o Node.js) ou yarn
+- [npm](https://www.npmjs.com/)
 
 🔨 **Guia de instalação**
 
@@ -26,15 +26,13 @@ cd lista-de-tarefas
 
 **Passo 2: Instalar dependências**
 ```bash
-npm install   # ou yarn install
+npm install   
 ```
 
 **Passo 3: Rodar o projeto**
 ```bash
-npm start   # ou yarn start
+npm start   
 ```
-
-O aplicativo estará disponível em `http://localhost:3000` por padrão.
 
 📦 **Tecnologias usadas:**
 
