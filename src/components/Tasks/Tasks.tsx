@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 
 interface Task {
@@ -8,15 +8,7 @@ interface Task {
 
 export const Tasks: React.FC = () => {
     const [taskTitle, setTaskTitle] = useState("");
-    const [tasks, setTasks] = useState<Task[]>(() => {
-        const savedTasks = localStorage.getItem("completedTasks");
-        return savedTasks ? JSON.parse(savedTasks) : [];
-    });
-
-    // Atualiza o localStorage sempre que a lista de tarefas completadas muda
-    useEffect(() => {
-        localStorage.setItem("completedTasks", JSON.stringify(tasks));
-    }, [tasks]);
+    const [tasks, setTasks] = useState<Task[]>([]);
 
     const handleAddTask = (event: React.FormEvent) => {
         event.preventDefault(); // Evita o recarregamento da página ao submeter o formulário
