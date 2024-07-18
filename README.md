@@ -1,5 +1,5 @@
 
-## Lista de Tarefas
+## TodoList
 
 **Um aplicativo simples para gerenciar suas tarefas diárias.**
 
@@ -20,7 +20,7 @@ Siga estes passos para configurar e executar o projeto localmente:
 
 **Passo 1: Clonar o repositório**
 ```bash
-git clone https://github.com/seu-usuario/lista-de-tarefas.git
+git clone https://github.com/angelodesenvolvedor/todolist
 cd lista-de-tarefas
 ```
 
@@ -35,10 +35,6 @@ npm start   # ou yarn start
 ```
 
 O aplicativo estará disponível em `http://localhost:3000` por padrão.
-
-🛠️ **Executando os testes**
-
-Atualmente, o projeto não possui testes automatizados implementados. Você pode adicionar testes utilizando ferramentas como Jest e React Testing Library conforme necessário.
 
 📦 **Tecnologias usadas:**
 
