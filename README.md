@@ -5,7 +5,7 @@
 
 🔥 **Introdução**
 
-Este projeto visa criar um aplicativo de lista de tarefas onde os usuários podem adicionar, marcar como concluídas e excluir tarefas. É uma aplicação básica para praticar conceitos de desenvolvimento web utilizando React.js.
+Este projeto faz parte do curso **Front-end em React** na Ada Tech. O objetivo é criar um aplicativo de lista de tarefas onde os usuários podem adicionar, marcar como concluídas e excluir tarefas. É uma aplicação básica para praticar conceitos de desenvolvimento web utilizando React.js.
 
 ⚙️ **Pré-requisitos**
 
