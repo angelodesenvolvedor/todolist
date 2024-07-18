@@ -7,7 +7,10 @@ interface Task {
 }
 
 export const Tasks: React.FC = () => {
-    const [taskTitle, setTaskTitle] = useState("");
+    const [taskTitle, setTaskTitle] = useState<string>(() => {
+        const savedTitle = localStorage.getItem("taskTitle");
+        return savedTitle ?? "";
+    });
     const [tasks, setTasks] = useState<Task[]>([]);
 
     // Carrega as tarefas do localStorage quando o componente é montado
@@ -22,6 +25,11 @@ export const Tasks: React.FC = () => {
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
+
+    // Atualiza o localStorage sempre que o título da tarefa muda
+    useEffect(() => {
+        localStorage.setItem("taskTitle", taskTitle);
+    }, [taskTitle]);
 
     const handleAddTask = (event: React.FormEvent) => {
         event.preventDefault(); // Evita o recarregamento da página ao submeter o formulário
@@ -69,5 +77,3 @@ export const Tasks: React.FC = () => {
         </section>
     );
 };
-
-
