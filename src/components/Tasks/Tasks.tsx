@@ -7,29 +7,16 @@ interface Task {
 }
 
 export const Tasks: React.FC = () => {
-    const [taskTitle, setTaskTitle] = useState<string>(() => {
-        const savedTitle = localStorage.getItem("taskTitle");
-        return savedTitle ?? "";
+    const [taskTitle, setTaskTitle] = useState("");
+    const [tasks, setTasks] = useState<Task[]>(() => {
+        const savedTasks = localStorage.getItem("completedTasks");
+        return savedTasks ? JSON.parse(savedTasks) : [];
     });
-    const [tasks, setTasks] = useState<Task[]>([]);
 
-    // Carrega as tarefas do localStorage quando o componente é montado
+    // Atualiza o localStorage sempre que a lista de tarefas completadas muda
     useEffect(() => {
-        const savedTasks = localStorage.getItem("tasks");
-        if (savedTasks) {
-            setTasks(JSON.parse(savedTasks));
-        }
-    }, []);
-
-    // Atualiza o localStorage sempre que a lista de tarefas muda
-    useEffect(() => {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
+        localStorage.setItem("completedTasks", JSON.stringify(tasks));
     }, [tasks]);
-
-    // Atualiza o localStorage sempre que o título da tarefa muda
-    useEffect(() => {
-        localStorage.setItem("taskTitle", taskTitle);
-    }, [taskTitle]);
 
     const handleAddTask = (event: React.FormEvent) => {
         event.preventDefault(); // Evita o recarregamento da página ao submeter o formulário
@@ -41,7 +28,7 @@ export const Tasks: React.FC = () => {
     };
 
     const toggleTaskCompletion = (index: number) => {
-        const updatedTasks = tasks.map((task, i) => 
+        const updatedTasks = tasks.map((task, i) =>
             i === index ? { ...task, completed: !task.completed } : task
         );
         setTasks(updatedTasks);
