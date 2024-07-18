@@ -11,7 +11,7 @@ Este projeto faz parte do curso **Front-end em React** na Ada Tech. O objetivo �
 
 Antes de começar, certifique-se de ter o seguinte instalado em seu sistema:
 
-- Node.js (versão 12 ou superior)
+- [Node.js](https://nodejs.org/en)
 - npm (geralmente vem instalado com o Node.js) ou yarn
 
 🔨 **Guia de instalação**
