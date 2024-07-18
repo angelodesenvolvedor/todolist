@@ -21,7 +21,7 @@ Siga estes passos para configurar e executar o projeto localmente:
 **Passo 1: Clonar o repositório**
 ```bash
 git clone https://github.com/angelodesenvolvedor/todolist
-cd lista-de-tarefas
+cd todolist
 ```
 
 **Passo 2: Instalar dependências**
